@@ -33,6 +33,10 @@ export const Container = styled.section`
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
+
+      @media (max-width: 630px) {
+        flex-direction: column;
+      }
     }
   }
 `;
@@ -58,5 +62,9 @@ export const Option = styled.button`
   }
   &.block {
     background-color: rgba(233, 13, 13, 0.3);
+  }
+
+  @media (max-width: 630px) {
+    margin-bottom: 20px;
   }
 `;

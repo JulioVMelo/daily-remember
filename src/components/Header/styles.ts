@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import Theme from '../../styles/Theme';
 
 export const Header = styled.header`
   display: flex;
@@ -14,5 +13,9 @@ export const Header = styled.header`
     font-size: 30px;
     color: #fff;
     font-weight: 500;
+  }
+
+  @media (max-width: 630px) {
+    padding: 100px 0;
   }
 `;

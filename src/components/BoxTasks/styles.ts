@@ -5,10 +5,20 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: baseline;
   padding: 0 140px;
+
+  @media (max-width: 1480px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 630px) {
+    padding: 0px;
+  }
 `;
 
 export const Box = styled.div`
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
   border-radius: 4px;
   background-color: #fff;
@@ -19,6 +29,10 @@ export const Box = styled.div`
     color: #5e5b5b;
     font-weight: 600;
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 1480px) {
+    margin-bottom: 30px;
   }
 `;
 
@@ -33,6 +47,10 @@ export const Task = styled.li`
   h3 {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  svg {
+    min-width: 20px;
   }
 
   &.bg-green {

@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { StatusProps, TaskProps } from '../../interfaces';
 
 export type TaskContextProps = {
   listTaskTodo?: TaskProps[];
@@ -11,18 +12,6 @@ export type TaskContextProps = {
 
 export type TaskProviderProps = {
   children: React.ReactNode;
-};
-
-export type StatusProps = {
-  done: boolean;
-  todo: boolean;
-  block: boolean;
-};
-
-export type TaskProps = {
-  id?: string;
-  title?: string;
-  status?: StatusProps;
 };
 
 export const TaskContextDefaultValues = {

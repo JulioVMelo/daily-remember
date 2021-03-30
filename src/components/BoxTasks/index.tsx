@@ -1,12 +1,13 @@
 import { Trash2 } from '@styled-icons/feather';
 import { useTask } from '../../hooks/use-task';
 import * as Ui from './styles';
+import { TaskProps } from '../../interfaces';
 
 export function BoxTasks() {
   const { listTaskTodo, listTaskDone, listTaskBlock, removeTask } = useTask();
-  // alterar tipagem dos parametros
-  function handleRemoveTask(item: any) {
-    if (removeTask) {
+
+  function handleRemoveTask(item: TaskProps) {
+    if (removeTask && item.id && item.status) {
       removeTask(item.id, item.status);
     }
   }
@@ -23,6 +24,7 @@ export function BoxTasks() {
                 color="#000"
                 size={20}
                 onClick={() => handleRemoveTask(item)}
+                role="button"
               />
             </Ui.Task>
           ))}
@@ -38,6 +40,7 @@ export function BoxTasks() {
                 color="#000"
                 size={20}
                 onClick={() => handleRemoveTask(item)}
+                role="button"
               />
             </Ui.Task>
           ))}
@@ -53,6 +56,7 @@ export function BoxTasks() {
                 color="#000"
                 size={20}
                 onClick={() => handleRemoveTask(item)}
+                role="button"
               />
             </Ui.Task>
           ))}

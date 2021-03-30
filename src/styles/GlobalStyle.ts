@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    *[role="button"] {
+        cursor: pointer;
+    }
+    
     body {
         font-family: 'Rubik', sans-serif;
         background-color: #EAEAEA;
